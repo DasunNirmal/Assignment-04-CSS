@@ -99,6 +99,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
+            animation: car-animation-wheels 5s infinite linear;
             bottom: 0;
             left: 38px;
             right: 0;
@@ -110,6 +111,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
+            animation: car-animation-wheels 5s infinite linear;
             bottom: 0;
             left: 346px;
 
@@ -130,6 +132,24 @@
 
             75%, 100%{
                 transform: translateX(-50%);
+            }
+        }
+
+        @keyframes car-animation-wheels {
+            0%, 25% {
+                transform: rotate(90deg);
+            }
+
+            25%, 50% {
+                transform: rotate(-180deg);
+            }
+
+            50%, 75% {
+                transform: rotate(180deg);
+            }
+
+            75%, 100% {
+                transform: rotate(180deg);
             }
         }
 
