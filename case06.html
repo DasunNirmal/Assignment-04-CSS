@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Case 06</title>
+    <link rel="stylesheet" href="assets/normalize.css">
 
-</body>
+    <style>
+
+        body {
+            overflow: hidden;
+        }
+
+        #sky {
+            width: 219vw;
+            height: 100vh;
+            background-image: url("assets/Car_Animation_Img/sky.jpg");
+            /*background-position: center;*/
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        section {
+            width: 219vw;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            animation: car-animation 5s infinite linear;
+        }
+
+        section>div:first-child {
+            width: 73vw;
+            height: 38vh;
+            background-image: url("assets/Car_Animation_Img/city.png");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+
+        section>div:nth-child(2) {
+            width: 73vw;
+            height: 38vh;
+            background-image: url("assets/Car_Animation_Img/city.png");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        section>div:nth-child(3) {
+            width: 73vw;
+            height: 38vh;
+            background-image: url("assets/Car_Animation_Img/city.png");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .road {
+            width: 219vw;
+            height: 40vh;
+            background-image: url("assets/Car_Animation_Img/road.jpg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+        }
+
+
+
+        @keyframes car-animation {
+            0%, 25%{
+                transform: translateX(0%);
+            }
+
+            25%, 50%{
+                transform: translateX(-25%);
+            }
+
+            50%, 75%{
+                transform: translateX(-50%);
+            }
+
+            75%, 100%{
+                transform: translateX(-50%);
+            }
+        }
+
+    </style>
+
+</head>
+    <body>
+
+    <div id="sky">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="road"></div>
+        </section>
+        <div id="car"></div>
+    </div>
+
+
+    </body>
 </html>
