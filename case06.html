@@ -25,7 +25,7 @@
             height: 100vh;
             display: flex;
             position: relative;
-            animation: car-animation 5s infinite linear;
+            animation: car-animation 6s infinite linear;
         }
 
         section>div:first-child {
@@ -98,7 +98,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
-            animation: car-animation-wheels 5s infinite linear;
+            animation: car-animation-wheels 6s infinite linear;
             bottom: 0;
             left: 38px;
             right: 0;
@@ -110,15 +110,16 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: absolute;
-            animation: car-animation-wheels 5s infinite linear;
+            animation: car-animation-wheels 6s infinite linear;
             bottom: 0;
             left: 346px;
 
         }
 
         @keyframes car-animation {
-            0%, 25%{
+            0% {
                 transform: translateX(0%);
+                transition: ease-in;
             }
 
             25%, 50%{
@@ -129,14 +130,16 @@
                 transform: translateX(-50%);
             }
 
-            75%, 100%{
+            100% {
                 transform: translateX(-50%);
+                transition: ease;
             }
         }
 
         @keyframes car-animation-wheels {
-            0%, 25% {
+            0% {
                 transform: rotate(90deg);
+                transition: ease-in;
             }
 
             25%, 50% {
@@ -149,6 +152,7 @@
 
             75%, 100% {
                 transform: rotate(180deg);
+                transition: ease;
             }
         }
 
